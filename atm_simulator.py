@@ -10,17 +10,10 @@ while current_attempt_number < max_attempts:
         print(f"The new balance is {balance}")
         break
     else:
-        print("You cannot withdraw the money: Insufficient funds")
+        if withdrawal_amount_int < 0:
+            print("Invalid amount!")
+        if withdrawal_amount_int > balance:
+            print("You cannot withdraw the money: Insufficient funds")
     current_attempt_number = current_attempt_number + 1
 print("We are out of the loop")
  
-
-
-
-
-
-
-
-
-
-
