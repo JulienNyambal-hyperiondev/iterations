@@ -1,5 +1,8 @@
 balance = 1000
-max_attempts = 3
+max_attempts = 10000
+remaining_attempts = 10000
+
+print("Welcome to our brilliant ATM!")
 
 current_attempt_number = 0
 while current_attempt_number < max_attempts:
@@ -15,5 +18,8 @@ while current_attempt_number < max_attempts:
         if withdrawal_amount_int > balance:
             print("You cannot withdraw the money: Insufficient funds")
     current_attempt_number = current_attempt_number + 1
+    remaining_attempts = remaining_attempts - 1
+    print(f"You have {remaining_attempts} left! Please don't fail")
+
 print("We are out of the loop")
  
