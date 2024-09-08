@@ -1,6 +1,6 @@
 
 
-# 1, 2, 3, .....1000
+list_of_fruits = ["apple", "banana"]
 
-for i in range(1, 1001, 5):
+for i in list_of_fruits:
     print(i)
